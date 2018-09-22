@@ -195,15 +195,20 @@ public class PlayState extends State implements InputProcessor {
 		if (!gameover) {
 			if (this.circle.getBounds().overlaps(rightTile.getBounds())) {
 
-
+//				float angle = 10 + random.nextFloat() * (45 - 10);
+//				circle.setAngle(angle);
 
 				collDiff = circle.getBounds().getY() - rightTile.getY();
-				if (circle.isMovingUp()){
+//				if (circle.isMovingUp()){
+//					circle.setAngle( 60 -(30*collDiff/rightTile.getHeight() )  );
+//				}else if (circle.isMovingDown()){
+//					circle.setAngle(  ((30*collDiff/rightTile.getHeight() +30) ));
+//				}
 
-//					circle.rotateTailtoBottomRight(50 );
-					circle.setAngle( 60 -(30*collDiff/rightTile.getHeight() )  );
+				if (circle.isMovingUp()){
+					circle.setAngle( 40 -(30*collDiff/rightTile.getHeight() )  );
 				}else if (circle.isMovingDown()){
-					circle.setAngle(  ((30*collDiff/rightTile.getHeight() +30) ));
+					circle.setAngle(  ((30*collDiff/rightTile.getHeight() +25) ));
 				}
 
 				circle.setMovingRight(false);
@@ -211,61 +216,34 @@ public class PlayState extends State implements InputProcessor {
 				score = score + 1;
 				tapSound.play(0.2f);
 				speedUp();
-//				if(score >= 10 && score < 20){
-//					circle.setSpeed(Gdx.graphics.getWidth()/65);
-//					circle.setTailLength(Gdx.graphics.getWidth()/14);
-//				}else if(score >= 20 && score < 30){
-//					circle.setSpeed(Gdx.graphics.getWidth()/60);
-//					circle.setTailLength(Gdx.graphics.getWidth()/13);
-//				}else if(score >= 30 && score < 40){
-//					circle.setSpeed(Gdx.graphics.getWidth()/55);
-//					circle.setTailLength(Gdx.graphics.getWidth()/12);
-//				}else if(score >= 40 && score < 50){
-//					circle.setSpeed(Gdx.graphics.getWidth()/55);
-//					circle.setTailLength(Gdx.graphics.getWidth()/11.5f);
-//				}else if(score >= 50 && score < 60){
-//					circle.setSpeed(Gdx.graphics.getWidth()/50);
-//					circle.setTailLength(Gdx.graphics.getWidth()/11);
-//				}else if(score >= 60 && score < 70){
-//					circle.setSpeed(Gdx.graphics.getWidth()/45);
-//					circle.setTailLength(Gdx.graphics.getWidth()/10.5f);
-//				}
 
 			}
 
 			if (this.circle.getBounds().overlaps(leftTile.getBounds())) {
 
+//				float angle = 10 + random.nextFloat() * (45 - 10);
+//				circle.setAngle(angle);
+
 				collDiff = circle.getBounds().getY() - leftTile.getY();
+//				if (circle.isMovingUp()){
+//					circle.setAngle( 60 - (30*collDiff/leftTile.getHeight() )  );
+//				}else if (circle.isMovingDown()){
+//					circle.setAngle( ((30*collDiff/leftTile.getHeight() +30 ) ));
+//				}
+
 				if (circle.isMovingUp()){
-					circle.setAngle( 60 - (30*collDiff/leftTile.getHeight() )  );
+					circle.setAngle( 40 - (30*collDiff/leftTile.getHeight() )  );
 				}else if (circle.isMovingDown()){
-					circle.setAngle( ((30*collDiff/leftTile.getHeight() +30 ) ));
+					circle.setAngle( ((30*collDiff/leftTile.getHeight() +25 ) ));
 				}
+
+
 
 				circle.setMovingLeft(false);
 				circle.setMovingRight(true);
 				score = score + 1;
 				tapSound.play(0.2f);
 				speedUp();
-//				if(score >= 10 && score < 20){
-//					circle.setSpeed(Gdx.graphics.getWidth()/65);
-//					circle.setTailLength(Gdx.graphics.getWidth()/14);
-//				}else if(score >= 20 && score < 30){
-//					circle.setSpeed(Gdx.graphics.getWidth()/60);
-//					circle.setTailLength(Gdx.graphics.getWidth()/13);
-//				}else if(score >= 30 && score < 40){
-//					circle.setSpeed(Gdx.graphics.getWidth()/55);
-//					circle.setTailLength(Gdx.graphics.getWidth()/12);
-//				}else if(score >= 40 && score < 50){
-//					circle.setSpeed(Gdx.graphics.getWidth()/55);
-//					circle.setTailLength(Gdx.graphics.getWidth()/11.5f);
-//				}else if(score >= 50 && score < 60){
-//					circle.setSpeed(Gdx.graphics.getWidth()/50);
-//					circle.setTailLength(Gdx.graphics.getWidth()/11);
-//				}else if(score >= 60 && score < 70){
-//					circle.setSpeed(Gdx.graphics.getWidth()/45);
-//					circle.setTailLength(Gdx.graphics.getWidth()/10.5f);
-//				}
 
 			}
 

@@ -45,7 +45,7 @@ public class Circle {
 		//evvel 70-e bolurdum
 		speed = Gdx.graphics.getWidth()/80;
 //		speed = 0;
-		angle = 60;
+		angle = 45;
 
 		this.movingRight = true;
 		this.movingLeft = false;
